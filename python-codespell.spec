@@ -19,7 +19,7 @@ primarily for checking misspelled words in source code, but it can be
 used with other files as well.
 
 %prep
-%autosetup -p1
+%autosetup -n %{oname}-%{version} -p1
 
 %build
 %py_build
