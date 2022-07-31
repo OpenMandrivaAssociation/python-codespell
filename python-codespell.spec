@@ -25,8 +25,8 @@ used with other files as well.
 %py_build
 
 # Generate manpage
-help2man ./bin/%{name} --no-discard-stderr \
-  --include %{name}.1.include --no-info --output %{oname}.1
+help2man ./bin/%{oname} --no-discard-stderr \
+  --include %{oname}.1.include --no-info --output %{oname}.1
 sed -i '/\.SS \"Usage/,+2d' %{oname}.1
 
 %install
