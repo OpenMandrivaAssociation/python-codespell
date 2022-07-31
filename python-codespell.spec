@@ -21,7 +21,7 @@ used with other files as well.
 %autosetup -p1
 
 %build
-%py3_build
+%py_build
 
 # Generate manpage
 help2man ./bin/%{name} --no-discard-stderr \
@@ -29,7 +29,7 @@ help2man ./bin/%{name} --no-discard-stderr \
 sed -i '/\.SS \"Usage/,+2d' %{name}.1
 
 %install
-%py3_install
+%py_install
 
 # Install manpage
 install -D -m644 %{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
@@ -38,7 +38,7 @@ install -D -m644 %{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 %doc README.rst
 %{_bindir}/%{name}
 %{_mandir}/man1/%{name}.1*
-%{python3_sitelib}/%{name}-%{version}-py%{python3_version}.egg-info/
-%{python3_sitelib}/%{name}_lib/
+%{python_sitelib}/%{name}-%{version}-py%{python_version}.egg-info/
+%{python_sitelib}/%{name}_lib/
 
 
