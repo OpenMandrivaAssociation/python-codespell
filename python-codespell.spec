@@ -37,7 +37,7 @@ install -D -m644 %{oname}.1 %{buildroot}%{_mandir}/man1/%{name}.1
 
 %files
 %doc README.rst
-%{_bindir}/%{name}
+%{_bindir}/%{oname}
 %{_mandir}/man1/%{oname}.1*
 %{python_sitelib}/%{oname}-%{version}-py%{python_version}.egg-info/
 %{python_sitelib}/%{oname}_lib/
