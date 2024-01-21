@@ -39,7 +39,7 @@ used with other files as well.
 %doc README.rst
 %{_bindir}/%{oname}
 #{_mandir}/man1/python-codespell.1.*
-%{python_sitelib}/%{oname}-%{version}-py%{python_version}.egg-info/
+#{python_sitelib}/%{oname}-%{version}-py%{python_version}.egg-info/
 %{python_sitelib}/%{oname}_lib/
 
 
