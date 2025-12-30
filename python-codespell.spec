@@ -1,7 +1,7 @@
 %define oname codespell
 Name:           python-codespell
 Version:        2.2.6
-Release:        2
+Release:        3
 Summary:        Find and fix common misspellings in text files
 Group:          Development/Tools
 License:        GPLv2
