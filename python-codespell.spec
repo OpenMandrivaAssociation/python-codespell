@@ -1,7 +1,7 @@
 %define oname codespell
 Name:           python-codespell
-Version:        2.2.6
-Release:        3
+Version:        2.4.3
+Release:        1
 Summary:        Find and fix common misspellings in text files
 Group:          Development/Tools
 License:        GPLv2
@@ -19,7 +19,7 @@ primarily for checking misspelled words in source code, but it can be
 used with other files as well.
 
 %prep
-%autosetup -n %{oname}-%{version} -p1
+%autosetup -n codespell-2.4.3 -p1
 
 %build
 %py_build
