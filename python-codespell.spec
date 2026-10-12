@@ -10,8 +10,10 @@ Source0:        https://github.com/lucasdemarchi/codespell/archive/v%{version}/%
 
 BuildArch:      noarch
 #BuildRequires:  help2man
-BuildRequires:  python
-BuildRequires:  python-setuptools
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(setuptools-scm)
 
 %description
 Finds and fixes common misspellings in text files. It is designed
@@ -19,9 +21,11 @@ primarily for checking misspelled words in source code, but it can be
 used with other files as well.
 
 %prep
-%autosetup -n codespell-2.4.3 -p1
+%autosetup -n codespell-%{version} -p1
 
 %build
+# The GitHub archive is not a git checkout, so setuptools-scm needs the version.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
 %py_build
 
 # Generate manpage
